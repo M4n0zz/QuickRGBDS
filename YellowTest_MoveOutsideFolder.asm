@@ -2,8 +2,7 @@
 Source to be compiled with RGBDS
 */
 
-DEF GiveItem 	EQU $3e3f
-DEF ClearScreen EQU $16dd
+include "pokeyellow.inc"
 
 SECTION "YellowTest", ROM0
 
