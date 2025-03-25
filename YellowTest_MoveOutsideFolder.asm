@@ -3,35 +3,36 @@ Source to be compiled with RGBDS
 */
 
 include "pokeyellow.inc"
+; include "pokered.inc"
 
-SECTION "YellowTest", ROM0
+SECTION "ItemGiverTest", ROM0
 
-LOAD "ItemGiver", WRAMX[$D8B4]
+LOAD "ItemGiver", WRAMX[$D8B4]  ; $D8B5 for rb
 start:
 call ClearScreen
-ld a, 255		; total item IDs
-ld [$cf96],a 	; wMaxItemQuantity write
-call $2c51 		; DisplayChooseQuantityMenu
-and a, a		; if a is 0, z flag is set
-ret nz 			; if B pressed, then ret
-ld a, [$cf95] 	; wItemQuantity read
+ld a, 255		    ; total item IDs
+ld [wMaxItemQuantity],a 
+call DisplayChooseQuantityMenu
+and a, a		    ; if a is 0, z flag is set
+ret nz 			    ; if B pressed, then ret
+ld a, [wItemQuantity]
 push af
-ld [$d11d], a	; wd11e - wNamedObjectIndex
-call $2ec4 		; GetItemName
-ld hl, $c409	; destination
-ld de, $cd6d	; origin (wNameBuffer)
-call $3816		; CopyString
+ld [wNamedObjectIndex], a
+call GetItemName 
+ld hl, $c409	    ; destination
+ld de, wNameBuffer	; origin
+call CopyString
 dec hl
-ld [hl], $7f	; blank last name byte
+ld [hl], $7f	    ; blank last name byte
 ld a, 99
-ld [$cf96], a 	; wMaxItemQuantity
-call $2c51 		; DisplayChooseQuantityMenu
+ld [wMaxItemQuantity], a
+call DisplayChooseQuantityMenu
 pop bc
-and a, a		; if a is 0, z flag is set
-jr nz, start	; if B pressed go to the beginning, ln0
-ld a, [$cf95] 	; wItemQuantity
-ld c, a			; bc = id, quantity
+and a, a		    ; if a is 0, z flag is set
+jr nz, start	    ; if B pressed go to the beginning, ln0
+ld a, [wItemQuantity]
+ld c, a			    ; bc = id, quantity
 call GiveItem
-jr start		; jp to start, ln0
+jr start		    ; jp to start, ln0
 ENDL
  
