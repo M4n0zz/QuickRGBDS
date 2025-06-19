@@ -12,6 +12,9 @@ For even easier use, you can create a shortcut of "Loader.bat" and drag your fil
 
 Be carefull! Never store your files into QuickRGBDS folder, since it always deletes the .asm file after compilation. Make sure you load them from a different directory!
 
+----
+
+Refer to [this assembly script](https://github.com/M4n0zz/QuickRGBDS/blob/main/HowTo.asm) for a complete example .
 
 ----
 
