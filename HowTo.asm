@@ -14,18 +14,18 @@ and completely avoid dealing with hardcoded addresses when calling specific func
 you can include preconfigured .inc files containing memory labels—sourced from pret-style projects.
 This makes it easy to write portable and version-flexible payloads.
 
-The next example demonstrates how to utilize the game's internal copy routine to relocate a payload
-into unused memory space. We'll then analyze the payload's functionality and explore its key components,
-including register usage, control flow, and jump mechanics.
+This example showcases the use of the game's internal copy function to render a message on-screen,
+and then executes a payload that triggers the HealParty routine to restore all party Pokémon.
 
 */
 
 
 include "pokered.inc"              ; we first include our game's compatible address book
-;include "pokeyellow.inc"          ; this way we can call functions by using names coming from 
+;include "pokeyellow.inc"          ; this way we can call functions by using names coming
                                    ; directly from pret .sym files
                                    ; https://github.com/pret/pokered/blob/symbols/pokered.sym
-include "charmap.inc"              ; this one also gives us all game's character to easily print text
+                                   
+include "charmap.inc"              ; this one gives us all game's character to easily print text
 
                                    
                                    ; we can also declare our own values 
@@ -39,7 +39,7 @@ SECTION "ScriptName", ROM0         ; this is required from RGBDS, we can give ou
 
 start:
 
-LOAD "NicknameWriterPayload", WRAMX[injectAddressRB]   ; Nickname Writer's execution 
+LOAD "NicknameWriterPayload", WRAMX[injectAddressRB]
 ; The LOAD directive tells the assembler where the payload will be placed in memory.
 ; This ensures that any static jumps or memory references within the payload are automatically
 ; adjusted based on that starting address.
