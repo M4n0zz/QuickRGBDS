@@ -50,9 +50,9 @@ LOAD "NicknameWriterPayload", WRAMX[injectAddressRB]
      
 ;;;;;;;;;;;; Payload ;;;;;;;;;;;; 
 payload:
-ld   bc, textwidth            ; number of bytes to be copied
-ld   hl, textstart		     ; origin address
-ld   de, $c3cc		          ; destination address
+ld   bc, textwidth                 ; number of bytes to be copied
+ld   hl, textstart		             ; origin address
+ld   de, $c3cc		                 ; destination address
 call CopyData
 ; This particular function copies a number of bytes—specified in register BC—
 ; from the source address in HL to the destination address in DE.
