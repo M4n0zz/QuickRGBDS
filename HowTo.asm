@@ -1,7 +1,8 @@
 /*
-
 Source is compiled with QuickRGBDS
 https://github.com/M4n0zz/QuickRGBDS
+
+MOVE IT OUTSIDE QuickRGBDS FOLDER BEFORE COMPILATION!
 
 This assembly file serves as a clear and practical example of how to use RGBDS to write ACE payloads.
 
