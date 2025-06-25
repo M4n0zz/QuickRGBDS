@@ -19,7 +19,8 @@ Refer to [this assembly script](https://github.com/M4n0zz/QuickRGBDS/blob/main/H
 
 ----
 
-If you need to transform a .map or a .sym file to an .inc one, you can give it a try with [this python script](https://github.com/M4n0zz/QuickRGBDS/blob/main/mapsymtoinc.py).
+If you need to transform a .map or a .sym file to an .inc one, you can try [this python script](https://github.com/M4n0zz/QuickRGBDS/blob/main/mapsymtoinc.py).
+Put both .sym or .map and python files in the same directory and run the script.
 
 ----
 
