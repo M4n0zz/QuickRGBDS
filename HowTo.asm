@@ -71,7 +71,7 @@ halt
 halt
 ; Add a brief delay so the text stays on screen long enough to be seen.
 
-ld   b, $03                   
+ld   b, HealParty_Bank                  
 ld   hl, HealParty
 jp   Bankswitch
 ; Game Boy games use different ROM banks. In this example, we use the game's internal function
