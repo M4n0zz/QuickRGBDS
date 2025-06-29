@@ -51,17 +51,20 @@ LOAD "NicknameWriterPayload", WRAMX[injectAddressRB]
      
 ;;;;;;;;;;;; Payload ;;;;;;;;;;;; 
 payload:
-ld   bc, textwidth                 ; number of bytes to be copied
+ld   c, textwidth                  ; number of bytes to be copied
 ld   hl, textstart                 ; origin address
 ld   de, $c3cc                     ; destination address
-call CopyData
-; This particular function copies a number of bytes—specified in register BC—
+call CopyMapConnectionHeaderloop
+; This particular function copies a number of bytes—specified in register C
 ; from the source address in HL to the destination address in DE.
 ; 
 ; The value in HL is calculated dynamically within the script and points to the start of the text,
 ; while DE holds the destination tilemap address, typically corresponding to a position on the screen.
 ; 
-; The exact number of bytes to copy (BC) is defined and calculated at the end of the program.
+; The exact number of bytes to copy (C) is defined and calculated at the end of the program.
+; 
+; CopyMapConnectionHeaderloop function is refered as CopyMapConnectionHeader.loop in Pret's .sym file.
+; The dot is removed for compatibility reasons.
 
 halt
 halt
