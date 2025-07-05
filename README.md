@@ -1,5 +1,5 @@
 # QuickRGBDS
-An RGBDS loader for Windows to compile your ACE payloads with a single drag n drop.
+An RGBDS wrapper for Windows to compile your ACE payloads with a single drag n drop.
 
 
 ----
@@ -7,20 +7,23 @@ An RGBDS loader for Windows to compile your ACE payloads with a single drag n dr
 
 ### How to use
 
-Just drag and drop your .asm file on "Loader.bat". A ".hex" file will be generated, including your compiled HEX payload in text format.
-For even easier use, you can create a shortcut of "Loader.bat" and drag your files on it.
+Simply drag and drop your .asm file (it should be located in a different folder) onto Loader.bat. This will generate a .hex file containing your compiled HEX payload in text format.
+For even easier access, you can create a shortcut to Loader.bat and drag your .asm files onto the shortcut instead.
+
 
 ### Warning
-Never store your files into QuickRGBDS folder, since it always deletes both the .asm and .hex files after compilation. Make sure you load them from a different directory!
+Never store your files inside QuickRGBDS folder. It always deletes both the .asm and .hex files after compilation, so make sure you load them from a different directory!
 
 ----
 
-Refer to [this assembly script](https://github.com/M4n0zz/QuickRGBDS/blob/main/HowTo.asm) for a complete example.
+### New to RGBDS?
+
+See [HowTo.asm](https://github.com/M4n0zz/QuickRGBDS/blob/main/HowTo.asm) for a minimal example on how to create an ACE payload!
 
 ----
 
-If you need to transform a .map or a .sym file to an .inc one, you can try [this python script](https://github.com/M4n0zz/QuickRGBDS/blob/main/mapsymtoinc.py).
-Put both .sym or .map and python files in the same directory and run the script.
+If you need to convert a .map or .sym file into an .inc file, you can use [this python script](https://github.com/M4n0zz/QuickRGBDS/blob/main/mapsymtoinc.py).
+Just place the .map or .sym file and the Python script in the same folder, then run the script to generate the .inc file.
 
 ----
 
