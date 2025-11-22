@@ -24,7 +24,7 @@ Never store your files inside QuickRGBDS folder. It always deletes both the .asm
 
 ### New to RGBDS?
 
-See [HowTo.asm](https://github.com/M4n0zz/QuickRGBDS/blob/main/HowTo.asm) for a minimal example on how to create an ACE payload!
+First of all you need a nice editor edit your payloads inside an .asm file. [Notepad++](https://notepad-plus-plus.org/downloads/) is recommended for this job, as well as a dark [theme](https://github.com/M4n0zz/QuickRGBDS/tree/main/npp%20themes) for Z80 Assembly (trust me your eyes will thank you later on). For a minimal example on how to create an ACE payload, see [HowTo.asm](https://github.com/M4n0zz/QuickRGBDS/blob/main/HowTo.asm)!
 
 For more advanced scripts you can take a look at my collection of [Generation 1 Pokemon payloads](https://github.com/M4n0zz/Gen1PokeScripts).
 
