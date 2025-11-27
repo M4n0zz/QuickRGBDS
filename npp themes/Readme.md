@@ -8,7 +8,7 @@
 
 - Z80 ASM themes
 - Transparent on different background colors
-- Twilight theme is recommented when a dark one is used in Settings -> Style configurator...
+- Twilight theme in Settings -> Style configurator is recommended when a dark RGBDS one is selected 
 
 
 ## Import
@@ -18,5 +18,6 @@
 3. Restart Npp
 
 4. Language -> (RGBDS ASM ...)
+
 
 
