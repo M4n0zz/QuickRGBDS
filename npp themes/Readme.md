@@ -1,5 +1,8 @@
 # Notepad++ RGBDS themes
-
+<p align="center">
+  <img src="darkred.png" width="500"/>
+   <img src="darkblue.png" width="500"/>
+</p>
 
 ## Features
 
@@ -15,4 +18,5 @@
 3. Restart Npp
 
 4. Language -> (RGBDS ASM ...)
+
 
